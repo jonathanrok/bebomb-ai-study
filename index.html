@@ -1,0 +1,947 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>AI AGENT STUDY GROUP 1기 신청서 · STUDIO BEBOMB</title>
+<meta name="description" content="6주 제작 스터디 · 2시간 AI 특강 신청서 — 11월 14일(토) 마감">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#003CFF">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI AGENT STUDY GROUP 1기 신청서">
+<meta property="og:description" content="6주 제작 스터디 · 2시간 AI 특강 — 11월 14일(토) 마감">
+<meta property="og:url" content="https://jonathanrok.github.io/bebomb-ai-study/">
+<meta property="og:image" content="https://jonathanrok.github.io/bebomb-ai-study/assets/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<link rel="icon" href="assets/symbol-blue.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@500;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+/* ============ STUDIO BEBOMB · Design System v4.4 토큰 ============ */
+:root{
+  --ink:#17171B; --elev:#1F1F25; --blue:#003CFF; --blue-h:#0033D9; --blue-a:#002BB8; --b400:#488EFF; --bt:#71BCFF;
+  --snow:#F5F5F5; --dim:#AFAFAF; --danger:#C42B2B;
+  --line:rgba(245,245,245,.12); --line2:rgba(245,245,245,.26);
+  --ko:'Pretendard Variable',Pretendard,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;
+  --en:'Sora',var(--ko); --an:'Anton',Impact,var(--ko); --mono:'JetBrains Mono',ui-monospace,monospace;
+  --gut:20px; --sb:env(safe-area-inset-bottom,0px); --rail:340px;
+}
+@media(min-width:768px){:root{--gut:40px}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--ink);color:var(--snow);font-family:var(--ko);font-size:16px;line-height:1.6;letter-spacing:-.01em;
+  word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;min-height:100vh;min-height:100dvh}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:0}
+.en{font-family:var(--en);font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.an{font-family:var(--an);font-weight:400;letter-spacing:0;text-transform:uppercase}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 var(--gut)}
+:focus-visible{outline:2px solid var(--bt);outline-offset:3px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ---------- 버튼 ---------- */
+.btn{appearance:none;border:0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 28px;
+  font-size:17px;font-weight:700;letter-spacing:-.01em;border-radius:0;transition:background .15s,border-color .15s,color .15s,opacity .15s;
+  -webkit-tap-highlight-color:transparent;text-decoration:none;white-space:nowrap}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-blue{background:var(--blue);color:#fff}.btn-blue:hover{background:var(--blue-h)}.btn-blue:active{background:var(--blue-a)}
+.btn-white{background:#fff;color:var(--ink)}.btn-white:hover{background:var(--snow)}
+.btn-ghost{background:transparent;color:var(--snow);border:1.5px solid var(--line2)}.btn-ghost:hover{border-color:var(--snow)}
+.btn-line-w{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.6)}.btn-line-w:hover{border-color:#fff}
+.btn[disabled]{opacity:.55;cursor:progress}
+.link{appearance:none;background:none;border:0;cursor:pointer;color:var(--bt);font-size:14px;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- 표지 (Royal Blue 풀블리드) ---------- */
+.top{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:20px var(--gut)}
+.top img{height:24px;width:auto}
+.due{font-family:var(--mono);font-size:12px;font-weight:700;color:#fff;border:1.5px solid rgba(255,255,255,.55);padding:6px 10px;white-space:nowrap}
+.hero{position:relative;overflow:hidden;color:#fff;display:flex;align-items:flex-end;
+  background:linear-gradient(125deg,#002BB8 0%,#003CFF 52%,#488EFF 92%,#71BCFF 135%);
+  min-height:640px;min-height:min(100dvh,880px);padding:104px 0 52px}
+.ring{position:absolute;border:1.5px solid rgba(255,255,255,.16);border-radius:50%;pointer-events:none}
+.hero .wrap{position:relative}
+.lead{display:flex;align-items:center;gap:14px;font-size:12px}
+.lead span{white-space:nowrap}
+.bar{flex:1;height:10px;background:#fff;display:block}
+.hero h1{font-size:clamp(58px,15.6vw,184px);line-height:.98;margin:16px 0 14px}
+.endbar{display:flex;align-items:center;gap:12px}.endbar .bar{max-width:none}
+.dot{width:18px;height:18px;border-radius:50%;background:#fff;flex:none;display:block}
+.hero-ko{font-size:clamp(21px,5.6vw,32px);font-weight:800;line-height:1.38;letter-spacing:-.035em;margin:30px 0 30px}
+.hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
+.hero-cta .meta{font-size:14px;color:rgba(255,255,255,.88)}
+.resume{margin-top:22px;border:1.5px solid rgba(255,255,255,.5);padding:16px 18px;display:flex;flex-wrap:wrap;gap:12px 16px;align-items:center;max-width:620px}
+.resume p{flex:1 1 220px;font-size:15px;font-weight:600}
+.resume .btn{height:44px;padding:0 18px;font-size:15px}
+
+/* ---------- 본문 섹션 ---------- */
+.sec{padding:76px 0;border-top:1px solid var(--line)}
+.sec-lab{display:flex;align-items:center;gap:12px;font-size:12px;color:var(--bt)}
+.sec-lab b{font-family:var(--mono);font-weight:700;letter-spacing:0}
+.sec-lab::after{content:"";flex:1;height:1px;background:var(--line)}
+.sec h2{font-size:clamp(28px,7.2vw,46px);font-weight:800;line-height:1.24;letter-spacing:-.04em;margin:18px 0 26px}
+.sec h2 em{font-style:normal;color:var(--bt)}
+@media(min-width:960px){
+  .sec .wrap{display:grid;grid-template-columns:330px 1fr;column-gap:56px}
+  .sec .sec-hd{grid-column:1}.sec .sec-bd{grid-column:2}
+  .sec h2{margin-bottom:0}
+}
+.thanks-line{font-size:17px;font-weight:600;margin-bottom:22px}
+.why{list-style:none;border-top:1.5px solid var(--line2)}
+.why li{display:grid;grid-template-columns:44px 1fr;gap:0 10px;padding:22px 0;border-bottom:1px solid var(--line)}
+.why .n{font-family:var(--mono);font-weight:700;color:var(--bt);font-size:15px;padding-top:2px}
+.why b{display:block;font-size:19px;font-weight:700;line-height:1.42;letter-spacing:-.025em}
+.why p{color:var(--dim);font-size:15.5px;margin-top:6px}
+.why p strong{color:var(--snow);font-weight:600}
+
+.tracks{display:grid;gap:14px}
+.stmt{font-size:clamp(20px,5.2vw,26px);font-weight:700;line-height:1.5;letter-spacing:-.03em;margin-bottom:26px}
+.stmt em{font-style:normal;color:var(--bt);font-weight:800}
+.crit{display:grid;gap:12px}
+@media(min-width:720px){.crit{grid-template-columns:1fr 1fr}}
+.crit>div{border:1.5px solid var(--line2);background:var(--elev);padding:22px 20px 20px}
+.crit .cl{font-size:11.5px;color:var(--bt)}
+.crit h3{font-size:26px;font-weight:800;letter-spacing:-.035em;margin:8px 0 2px}
+.crit .cq{color:var(--dim);font-size:15px}
+.crit .ca{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-size:15.5px;line-height:1.58}
+.crit .ca b{color:var(--bt);font-weight:700}
+.why-note{margin-top:18px;font-size:15px;color:var(--dim);border-left:3px solid var(--bt);padding:4px 0 4px 14px}
+.why-note b{color:var(--snow);font-weight:700}
+.subs{display:grid;gap:10px;margin:18px 0 16px}
+@media(min-width:720px){.subs{grid-template-columns:repeat(3,1fr)}}
+.sub3{background:var(--ink);border:1.5px solid var(--line2);padding:16px 16px 14px}
+.sub3 .k{display:inline-grid;place-items:center;width:28px;height:28px;font-family:var(--mono);font-weight:700;font-size:13px;border:1.5px solid var(--bt);color:var(--bt);margin-bottom:10px}
+.sub3 b{display:block;font-size:18px;font-weight:800;letter-spacing:-.03em;line-height:1.35}
+.sub3 q{display:block;color:var(--dim);font-size:13.5px;margin-top:4px}
+.sub3 dl{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);font-size:14px;line-height:1.5}
+.sub3 dt{color:var(--bt);font-size:11.5px;font-weight:700;margin-top:6px}
+.sub3 dt:first-child{margin-top:0}
+.common{font-size:14px;color:var(--dim);line-height:1.6}
+.common b{color:var(--snow)}
+.track{border:1.5px solid var(--line2);padding:26px 24px 24px;background:var(--elev)}
+.track.a{border-color:var(--bt);background:linear-gradient(180deg,rgba(0,60,255,.26),rgba(0,60,255,.08))}
+.tag{display:inline-block;font-size:13px;font-weight:700;padding:5px 10px;border:1.5px solid var(--snow);line-height:1.3}
+.track.a .tag{background:var(--blue);border-color:var(--blue);color:#fff}
+.thd{display:flex;align-items:baseline;gap:6px;margin:20px 0 8px;flex-wrap:wrap}
+.thd .n{font-family:var(--an);font-size:68px;line-height:.82;color:var(--bt)}
+.thd .u{font-size:26px;font-weight:800;color:var(--bt)}
+.thd .t{font-size:26px;font-weight:800;margin-left:8px;letter-spacing:-.03em}
+.track .sub{font-size:16px;font-weight:700;color:var(--bt);margin-bottom:12px}
+.track.b .sub{color:var(--snow)}
+.dl{list-style:none}
+.dl li{position:relative;padding:5px 0 5px 20px;font-size:15.5px}
+.dl li::before{content:"";position:absolute;left:2px;top:14px;width:7px;height:7px;background:var(--bt)}
+
+.tl{list-style:none;border-top:1.5px solid var(--line2)}
+.tl li{display:grid;grid-template-columns:104px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}
+.tl .d{font-family:var(--mono);font-weight:700;color:var(--bt);font-size:15px;padding-top:1px}
+.tl b{display:block;font-size:17px;font-weight:700}
+.tl small{display:block;color:var(--dim);font-size:14px;margin-top:2px}
+.tl li.key b::after{content:"결과";font-size:11.5px;font-weight:700;color:#fff;background:var(--blue);padding:2px 7px;margin-left:8px;vertical-align:2px}
+@media(min-width:960px){
+  .tl{display:grid;grid-template-columns:repeat(var(--n,5),1fr);border-top:2px solid var(--snow)}
+  .tl li{display:block;border:0;padding:20px 14px 0 0;position:relative}
+  .tl li::before{content:"";position:absolute;top:-7px;left:0;width:12px;height:12px;background:var(--bt)}
+  .tl .d{display:block;margin-bottom:8px}
+}
+
+.check{list-style:none;border-top:1.5px solid var(--line2)}
+.check li{position:relative;padding:16px 0 16px 34px;border-bottom:1px solid var(--line)}
+.check li::before{content:"";position:absolute;left:0;top:20px;width:20px;height:20px;background:var(--bt);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M0 0h20v20H0z' fill='none'/%3E%3Cpath d='M1.5 1.5h17v17h-17z' fill='none' stroke='%23000' stroke-width='2'/%3E%3Cpath d='M5.5 10.2l3 3 6-6.4' fill='none' stroke='%23000' stroke-width='2.2'/%3E%3C/svg%3E") center/contain no-repeat;
+          mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M0 0h20v20H0z' fill='none'/%3E%3Cpath d='M1.5 1.5h17v17h-17z' fill='none' stroke='%23000' stroke-width='2'/%3E%3Cpath d='M5.5 10.2l3 3 6-6.4' fill='none' stroke='%23000' stroke-width='2.2'/%3E%3C/svg%3E") center/contain no-repeat}
+.check b{display:block;font-size:16.5px;font-weight:700}
+.check span{display:block;color:var(--dim);font-size:15px;margin-top:2px}
+@media(min-width:720px){.check li{display:grid;grid-template-columns:150px 1fr;gap:16px}.check span{margin-top:0}}
+
+.final{padding:72px 0 84px;border-top:1px solid var(--line);text-align:left}
+.final h3{font-size:clamp(24px,6vw,36px);font-weight:800;letter-spacing:-.035em;line-height:1.3;margin-bottom:24px}
+.final .btn{width:100%;max-width:420px;height:60px;font-size:18px}
+.final .meta{color:var(--dim);font-size:14px;margin-top:14px}
+
+.foot{border-top:1px solid var(--line);padding:28px 0 calc(32px + var(--sb))}
+.foot .wrap{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;justify-content:space-between}
+.foot img{height:24px;width:auto}
+.foot span{font-size:11px;color:var(--dim)}
+
+.stick{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:20px var(--gut) calc(14px + var(--sb));
+  background:linear-gradient(to bottom,rgba(23,23,27,0),rgba(23,23,27,.97) 34%);transform:translateY(110%);transition:transform .28s ease}
+.stick.on{transform:none}
+.stick .btn{width:100%}
+@media(min-width:960px){.stick{display:none}}
+
+/* ---------- 신청서 화면 ---------- */
+.shell{min-height:100vh;min-height:100dvh;display:grid;grid-template-columns:1fr}
+@media(min-width:1080px){.shell{grid-template-columns:var(--rail) 1fr}}
+.rail{display:none}
+@media(min-width:1080px){
+  .rail{display:flex;flex-direction:column;position:sticky;top:0;height:100vh;height:100dvh;overflow:hidden;color:#fff;padding:32px 34px 30px;
+    background:linear-gradient(165deg,#002BB8 0%,#003CFF 58%,#488EFF 135%)}
+  .rail .ring{border-color:rgba(255,255,255,.14)}
+  .rail>*:not(.ring){position:relative}
+  .rail .logo{height:22px;width:auto}
+  .rail .rt{font-size:50px;line-height:1;margin:46px 0 12px}
+  .rail .rs{font-size:11.5px;opacity:.9}
+  .steps{list-style:none;margin-top:38px;display:grid;gap:2px}
+  .steps li{display:flex;align-items:center;gap:12px;padding:8px 0;font-size:15px;color:rgba(255,255,255,.62)}
+  .steps .n{font-family:var(--mono);font-size:12px;font-weight:700;width:22px}
+  .steps .bx{width:14px;height:14px;border:1.5px solid rgba(255,255,255,.55);flex:none;display:grid;place-items:center}
+  .steps li.done{color:rgba(255,255,255,.9)}
+  .steps li.done .bx{border-color:#fff}
+  .steps li.done .bx::after{content:"";width:7px;height:4px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg) translate(0,-1px)}
+  .steps li.cur{color:#fff;font-weight:700}
+  .steps li.cur .bx{background:#fff;border-color:#fff}
+  .rail .rf{margin-top:auto;font-size:13px;line-height:1.55;opacity:.92}
+  .rail .rf b{font-family:var(--mono);font-weight:700}
+}
+.main{display:flex;flex-direction:column;min-height:100vh;min-height:100dvh;min-width:0}
+.tbar{position:sticky;top:0;z-index:15;background:rgba(23,23,27,.9);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.tbar .row{display:flex;align-items:center;justify-content:space-between;gap:12px;height:56px;padding:0 var(--gut);max-width:800px;margin:0 auto}
+.tbar .brand{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:700;min-width:0}
+.tbar .brand img{width:22px;height:22px}
+@media(min-width:1080px){.tbar .brand img{display:none}}
+.tbar .cnt{font-size:13px;color:var(--dim);white-space:nowrap}
+.tbar .cnt b{color:var(--snow);font-weight:700}
+.prog{height:3px;background:rgba(245,245,245,.08)}
+.prog i{display:block;height:100%;background:var(--bt);transition:width .45s cubic-bezier(.2,.7,.2,1)}
+.screen{width:100%;max-width:800px;margin:0 auto;padding:40px var(--gut) 40px;flex:1}
+.screen.enter{animation:rise .38s cubic-bezier(.2,.7,.2,1)}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.screen.enter{animation:none}html{scroll-behavior:auto}.prog i{transition:none}}
+.sc-lab{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--bt)}
+.sc-lab b{font-family:var(--mono);letter-spacing:0}
+.sc-h{font-size:clamp(28px,7vw,40px);font-weight:800;letter-spacing:-.04em;line-height:1.25;margin:12px 0 8px;outline:none}
+.sc-lead{color:var(--dim);font-size:16px}
+.sc-body{margin-top:20px}
+
+.q{padding:28px 0;border-top:1px solid var(--line)}
+.sc-body>.q:first-child{border-top:0;padding-top:8px}
+.q-n{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--bt);margin-bottom:8px}
+.q-t{display:block;font-size:19px;font-weight:700;line-height:1.46;letter-spacing:-.025em}
+.q-t .op{display:inline-block;font-size:12.5px;font-weight:600;color:var(--dim);border:1px solid var(--line2);padding:0 7px;margin-left:8px;vertical-align:2px;line-height:1.6}
+.q.solo .q-t{font-size:clamp(22px,5.8vw,28px);font-weight:800;line-height:1.38;letter-spacing:-.035em}
+.q-d{color:var(--dim);font-size:15px;margin-top:6px}
+.q-b{margin-top:16px}
+
+.opts{display:grid;gap:10px}
+.opts.grid{grid-template-columns:1fr 1fr}
+.opts.row{grid-template-columns:repeat(auto-fit,minmax(118px,1fr))}
+@media(min-width:640px){.opts.grid{grid-template-columns:repeat(3,1fr)}}
+.opt{appearance:none;cursor:pointer;text-align:left;display:flex;align-items:center;gap:14px;width:100%;min-height:58px;padding:14px 16px;
+  background:var(--elev);border:1.5px solid var(--line2);border-radius:0;transition:border-color .15s,background .15s,opacity .15s;-webkit-tap-highlight-color:transparent}
+.opt:hover{border-color:rgba(113,188,255,.7)}
+.opt .key{flex:none;width:28px;height:28px;display:grid;place-items:center;font-family:var(--mono);font-size:13px;font-weight:700;border:1.5px solid var(--line2);color:var(--dim);transition:inherit}
+.opt .ot{flex:1;min-width:0;font-size:16px;font-weight:600;line-height:1.42}
+.opt .ot small{display:block;font-size:13.5px;font-weight:500;color:var(--dim);margin-top:3px}
+.opt .ind{flex:none;width:20px;height:20px;border:1.5px solid var(--line2);border-radius:50%;display:grid;place-items:center}
+.opt[role=checkbox] .ind{border-radius:0}
+.opt[aria-checked=true]{border-color:var(--bt);background:rgba(0,60,255,.2)}
+.opt[aria-checked=true] .key{background:var(--blue);border-color:var(--blue);color:#fff}
+.opt[aria-checked=true] .ind{background:var(--blue);border-color:var(--blue)}
+.opt[aria-checked=true] .ind::after{content:"";width:9px;height:5px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg) translate(1px,-1px)}
+.opt[aria-disabled=true]{opacity:.36;cursor:not-allowed}
+.opts.grid .opt,.opts.row .opt{justify-content:center;text-align:center;padding:12px 10px;min-height:54px;gap:8px}
+.opts.grid .opt .ot,.opts.row .opt .ot{flex:0 1 auto;min-width:0;font-size:15.5px;line-height:1.35}
+.opts.grid .opt .ind,.opts.row .opt .ind{display:none}
+.opts.grid .opt[aria-checked=true] .ot::before,.opts.row .opt[aria-checked=true] .ot::before{content:"";display:inline-block;width:9px;height:5px;border-left:2px solid var(--bt);border-bottom:2px solid var(--bt);transform:rotate(-45deg);margin:0 8px 3px 0;vertical-align:middle}
+.opt.lg{min-height:86px;padding:18px}
+.opt.lg .ot{font-size:18.5px;font-weight:700}
+.opt.lg .ot small{font-size:14px}
+.maxnote{font-family:var(--mono);font-size:12px;color:var(--dim);margin-top:10px}
+.maxnote.full{color:var(--bt)}
+.other{margin-top:10px}
+
+.in{display:block;width:100%;font:inherit;font-size:17px;color:var(--snow);background:var(--elev);border:1.5px solid var(--line2);border-radius:0;
+  padding:15px 16px;outline:none;transition:border-color .15s;-webkit-appearance:none;appearance:none}
+.in::placeholder{color:rgba(175,175,175,.72)}
+.in:focus{border-color:var(--bt)}
+textarea.in{min-height:136px;resize:vertical;line-height:1.62}
+.cnt-row{display:flex;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:12px;color:var(--dim);margin-top:8px}
+.cnt-row .ok{color:var(--bt)}
+.q.err .in,.q.err .opt:not([aria-checked=true]){border-color:var(--danger)}
+.emsg{display:none;align-items:center;gap:8px;margin-top:10px;font-size:14px;font-weight:600;color:var(--snow)}
+.emsg::before{content:"!";flex:none;display:grid;place-items:center;width:18px;height:18px;background:var(--danger);color:#fff;font-size:12px;font-weight:800;border-radius:50%}
+.q.err .emsg{display:flex}
+
+.scn{border:1.5px solid var(--line2);background:var(--elev);padding:20px 18px;margin-bottom:6px}
+.scn-lab{font-size:11.5px;color:var(--bt);margin-bottom:14px}
+.scn-flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:8px;text-align:center}
+.scn-flow>div{border:1.5px solid var(--line2);padding:14px 6px 12px;background:var(--ink)}
+.scn-flow>div.to{border-color:var(--bt)}
+.scn-flow b{display:block;font-family:var(--an);font-weight:400;font-size:34px;line-height:1;color:var(--snow)}
+.scn-flow b.k{font-family:var(--ko);font-weight:800;font-size:20px;line-height:1.7;letter-spacing:-.03em}
+.scn-flow span{display:block;font-size:12.5px;color:var(--dim);margin-top:6px;line-height:1.35}
+.scn-flow i{font-style:normal;color:var(--bt);font-weight:800}
+
+.terms{background:var(--elev);border:1.5px solid var(--line2);padding:18px 18px 16px;margin-bottom:14px}
+.terms dl{display:grid;grid-template-columns:68px 1fr;gap:8px 12px;font-size:14.5px}
+.terms dt{color:var(--dim);font-weight:600}
+.summary{border:1.5px solid var(--line2);padding:18px 18px 16px;margin-bottom:6px}
+.summary .sh{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.summary .sh span{font-size:11.5px;color:var(--bt)}
+.summary dl{display:grid;grid-template-columns:68px 1fr;gap:6px 12px;font-size:15px}
+.summary dt{color:var(--dim)}
+.summary dd{font-weight:600}
+
+.nav{position:sticky;bottom:0;z-index:15;padding:22px var(--gut) calc(14px + var(--sb));
+  background:linear-gradient(to bottom,rgba(23,23,27,0),rgba(23,23,27,.97) 30%)}
+.nav .row{max-width:720px;margin:0 auto;display:flex;gap:10px;align-items:center}
+.nav .btn-ghost{flex:none;width:96px;padding:0}
+.nav .btn-blue{flex:1}
+.nav .kb{display:none;font-family:var(--mono);font-size:12px;color:var(--dim);white-space:nowrap}
+@media(min-width:1080px){.nav .kb{display:block}}
+.toast{position:fixed;left:50%;bottom:calc(96px + var(--sb));transform:translateX(-50%) translateY(20px);opacity:0;z-index:40;background:var(--snow);color:var(--ink);
+  font-size:14px;font-weight:700;padding:12px 16px;transition:opacity .2s,transform .2s;pointer-events:none;max-width:calc(100% - 40px);text-align:center}
+.toast.on{opacity:1;transform:translateX(-50%)}
+
+/* ---------- 감사 · 마감 ---------- */
+.hero.done{min-height:0;padding:120px 0 64px}
+.hero.done h1{font-size:clamp(64px,17vw,180px)}
+.hero.closed{background:var(--elev)}
+.hero-p{font-size:17px;line-height:1.65;max-width:640px;color:rgba(255,255,255,.94)}
+.hero-p b{font-weight:800}
+.dbg{margin-top:28px;border:1px dashed var(--line2);padding:14px}
+.dbg summary{cursor:pointer;font-size:13px;color:var(--dim)}
+.dbg pre{margin-top:10px;font-family:var(--mono);font-size:11.5px;line-height:1.5;white-space:pre-wrap;word-break:break-all;color:var(--snow);max-height:420px;overflow:auto}
+.pv{position:fixed;top:8px;left:50%;transform:translateX(-50%);z-index:50;font-family:var(--mono);font-size:10px;font-weight:700;background:var(--snow);color:var(--ink);padding:3px 7px;pointer-events:none;white-space:nowrap;opacity:.9}
+</style>
+</head>
+<body>
+<div id="app" aria-live="polite"></div>
+<div class="toast" id="toast" role="status"></div>
+<noscript><p style="padding:24px">이 신청서는 자바스크립트가 켜져 있어야 작성할 수 있습니다.</p></noscript>
+<script>
+"use strict";
+/* ============================================================
+   AI AGENT STUDY GROUP 1기 신청서 — STUDIO BEBOMB
+   ============================================================ */
+const CONFIG = {
+  endpoint: "",                          // 응답 받는 주소 — 비어 있으면 미리보기 모드(전송 안 함)
+  closeAt: "2026-11-14T23:59:59+09:00",              // 11-11 Jonathan: 이번 주 토요일 마감
+  storage: "Google 스프레드시트",
+  version: "cohort01-web-v1",
+  draftKey: "bebomb_cohort01_draft_v1",
+};
+const URLQ = new URLSearchParams(location.search);
+const PREVIEW = !CONFIG.endpoint || URLQ.has("preview");   // ?preview=1 → 공개 페이지에서도 전송 막고 도구 사용
+const DEBUG = URLQ.has("debug");
+const TOOLS = PREVIEW;                   // 화면 바로 열기 · 예시 답 · 자가 점검은 미리보기(전송 안 함)에서만
+
+/* ---------------- 문항 ---------------- */
+const o = (arr) => arr.map((t, i) => ({ v: "o" + (i + 1), t }));
+const TIMES = [{ v: "tue_am", t: "화요 조찬 직후 (오전)" }, { v: "eve", t: "평일 저녁" }, { v: "night", t: "평일 밤 온라인 (21시~)" }];
+const TRACKS = [   // 6주 제작 스터디 세 갈래
+  { v: "a_mkt", k: "A", t: "AI 마케팅팀", q: "마케팅 그 일, AI가 하게", keep: "매일 돌아가는 마케팅 AI 1개 + 직원용 설명서", who: "AI가 처음이라 하나라도 확실히 만들고 싶은 분" },
+  { v: "b_company", k: "B", t: "AI로 돌아가는 회사", q: "회사의 뇌부터, 첫 부서는 마케팅", keep: "회사의 뇌 + AI 직원 2명 + 90일 로드맵", who: "회사 전체에 AI를 들이고 싶은 분 · 노하우가 사람마다 흩어진 회사" },
+  { v: "c_ax", k: "C", t: "AI 전환 클럽", q: "무엇을, 누구에게, 어떤 순서로 맡길까", keep: "우리 회사 AI 전환 로드맵 + 파일럿 1건", who: "직원이 많아 계획과 순서가 먼저인 회사" },
+];
+const S = {
+  path: { en: "COURSE", ko: "과정 선택", auto: true, qs: [
+    { k: "q1_1", type: "single", size: "lg", solo: true, t: "어떤 과정에 신청하시나요?", d: "잘 모르시겠다면 '둘 다'를 고르셔도 됩니다.", o: [
+      { v: "study", t: "6주 제작 스터디", s: "목표별 세 가지 스터디 · 신청서 검토 후 선정" },
+      { v: "talk", t: "2시간 AI 특강", s: "AI 활용 교양 · 역량 강화 · 누구나 신청" },
+      { v: "both", t: "둘 다", s: "제작 스터디와 AI 특강 모두 신청" }] }] },
+  basic: { en: "ABOUT YOU", ko: "기본 정보", lead: "결과 안내와 그룹 · 반 편성에만 씁니다.", qs: [
+    { k: "q2_1", type: "text", t: "성함", max: 20, ac: "name" },
+    { k: "q2_2", type: "text", t: "회사명", max: 60, ac: "organization" },
+    { k: "q2_3", type: "text", t: "직함", max: 30, ph: "예) 대표", ac: "organization-title" },
+    { k: "q2_4", type: "single", layout: "grid", other: true, t: "업종", o: o(["제조", "유통 · 도소매", "서비스", "IT · 소프트웨어", "교육", "건설 · 부동산", "의료 · 복지", "금융 · 보험"]) },
+    { k: "q2_5", type: "single", layout: "row", t: "직원 수 (대표님 포함)", o: [{ v: "1_4", t: "1~4명" }, { v: "5_19", t: "5~19명" }, { v: "20_49", t: "20~49명" }, { v: "50p", t: "50명 이상" }] },
+    { k: "q2_6", type: "tel", t: "휴대폰 번호", d: "결과를 문자나 카카오톡으로 알려 드립니다.", ph: "010-0000-0000" },
+    { k: "q2_7", type: "email", opt: true, t: "이메일", d: "자료를 보내 드릴 때 씁니다.", ph: "name@company.com" }] },
+  reason: { en: "WHY", ko: "참여 이유", auto: true, qs: [
+    { k: "q3_1", type: "single", solo: true, shuffle: true, t: "관심을 갖게 된 이유와 가장 가까운 것을 하나만 골라 주세요", d: "어떤 답이든 괜찮습니다. 대표님께 맞는 과정을 안내해 드리려는 질문입니다.", o: [
+      { v: "build_ready", t: "만들고 싶은 것이 이미 있다" },
+      { v: "change_work", t: "회사 업무 중 AI에 맡길 일을 찾아 실제로 바꿔 보고 싶다" },
+      { v: "flow", t: "AI로 어디까지 되는지 흐름을 알고 싶다" },
+      { v: "broaden", t: "이미 잘 쓰고 있는데, 더 다양하게 활용하고 싶다" },
+      { v: "peers", t: "대표님들과 함께 배우는 자리가 좋다" }] }] },
+  goal: { en: "YOUR GOAL", ko: "희망 스터디", auto: true, qs: [
+    { k: "q3_2", type: "single", size: "lg", solo: true, t: "세 가지 제작 스터디 가운데 대표님 목표와 가장 가까운 것을 골라 주세요",
+      d: "같은 목표의 대표님끼리 그룹을 나눕니다. 정하기 어려우시면 '아직 모르겠다'를 골라 주세요.",
+      o: [...TRACKS.map((x) => ({ v: x.v, t: x.t, s: `“${x.q}”`, s2: `6주 뒤 남는 것 — ${x.keep}` })),
+        { v: "unsure", t: "아직 모르겠다", s: "신청서를 보고 맞는 스터디를 추천받고 싶다" }] }] },
+  decided: { en: "YOUR PROJECT", ko: "만들고 싶은 것", auto: true, qs: [
+    { k: "q4_0", type: "single", solo: true, t: "6주 동안 AI로 돌아가게 만들고 싶은 업무가 있으신가요?", d: "작은 업무여도 좋습니다. 아직 없으셔도 괜찮습니다.", o: [
+      { v: "yes", t: "네, 있습니다" }, { v: "not_yet", t: "아직 정하지 못했습니다" }] }] },
+  build: { en: "YOUR PROJECT", ko: "맡길 업무 자세히", lead: "구체적으로 적어 주실수록 첫 주부터 바로 시작할 수 있습니다.", qs: [
+    { k: "q4_1", type: "long", min: 60, t: "어떤 업무를 AI에 맡기고 싶으신가요? 결과물은 누가 쓰나요?", d: "60자 이상 적어 주세요.",
+      ph: "예) 매주 월요일 아침, 지난주 매출 · 미수금 · 할 일을 정리한 보고서가 제 메일로 먼저 와 있게 하고 싶다. 저와 경리 담당이 본다." },
+    { k: "q4_2", type: "long", min: 20, rows: 3, t: "지금은 그 일을 누가, 어떻게, 얼마나 자주 하고 있나요?", ph: "예) 경리 담당이 매주 월요일 엑셀 파일 3개를 합쳐서 1시간쯤 걸려 만든다." },
+    { k: "q4_3", type: "text", min: 10, max: 120, t: "6주 뒤 '됐다'고 느끼실 기준을 한 줄로 적어 주세요", ph: "예) 4주 연속 월요일 9시 전에 보고서가 와 있고, 숫자가 엑셀과 맞는다." },
+    { k: "q4_4", type: "single", t: "그 일에 필요한 자료(메일 · 드라이브 · 엑셀 · 회계 프로그램 등)를 대표님이 직접 열어 보실 수 있나요?", o: [
+      { v: "direct", t: "네, 직접 볼 수 있습니다" }, { v: "partial", t: "일부만 볼 수 있습니다" }, { v: "staff", t: "담당 직원만 볼 수 있습니다" }] },
+    { k: "q4_5", type: "single", layout: "grid", other: true, t: "어느 분야의 업무인가요?", o: o(["마케팅", "영업", "경영지원(회계 · 문서)", "운영 · 생산", "고객 응대"]) }] },
+  ai: { en: "AI TODAY", ko: "지금 AI를 쓰시는 모습", lead: "수준별 반을 나누는 데만 씁니다. 잘하고 못하고를 보려는 질문이 아닙니다.", qs: [
+    { k: "q5_1", type: "single", t: "지금 AI를 어떻게 쓰고 계신가요? 가장 가까운 것을 골라 주세요", o: [
+      { v: "rarely", t: "거의 쓰지 않는다" }, { v: "ask", t: "가끔 궁금한 것을 물어본다" }, { v: "weekly", t: "매주 글 · 문서 · 요약 작업에 쓴다" },
+      { v: "files", t: "자료를 올려 결과물을 만들게 한다", s: "예: 보고서 · 제안서 초안" },
+      { v: "automated", t: "반복 업무를 자동으로 돌려 놓았다", s: "예: 매일 자동 정리 · 발송" }] },
+    { k: "q5_2", type: "multi", layout: "grid", other: true, t: "써 보신 AI 도구를 모두 골라 주세요", o: [
+      ...o(["ChatGPT", "Claude", "Gemini", "Perplexity", "Claude Code", "Cursor 또는 Antigravity", "자동화 도구 (n8n · Make · Zapier)", "API 직접 연결"]),
+      { v: "none", t: "써 본 적 없음", excl: true }] },
+    { k: "q5_3", type: "long", rows: 3, t: "최근 한 달 사이 AI로 끝까지 만들어서 실제로 쓰신 것이 있다면 하나만 알려 주세요",
+      d: "무엇을 · 어떤 도구로 · 어디에 쓰셨는지 적어 주세요. 없으면 '없음'이라고 적어 주세요.", ph: "예) Claude로 신제품 소개 문구 5개를 만들어 인스타그램에 올렸다." },
+    { k: "q5_4", type: "single", layout: "row", t: "컴퓨터에서 폴더를 만들고 파일을 정리하는 일은 어떠신가요?", o: [{ v: "hard", t: "어렵다" }, { v: "can", t: "할 수 있다" }, { v: "fluent", t: "익숙하다" }] }] },
+  task: { en: "SCENARIO", ko: "짧은 상황 질문", lead: "정답이 없습니다. 평소 하시는 대로 적어 주시면 반 편성에 큰 도움이 됩니다.", pre: "scenario", qs: [
+    { k: "q6_1", type: "long", min: 30, rows: 5, t: "지난달 거래처와 주고받은 메일 30통 가운데, 아직 대금을 받지 못한 건만 골라 표로 정리하려 합니다. AI에게 어떻게 시키시겠어요?",
+      d: "AI를 써 보지 않으셨다면 '직원에게 시킨다면'으로 적으셔도 됩니다. (30자 이상)", ph: "평소 하시는 방식 그대로 적어 주세요." }] },
+  cond: { en: "COMMITMENT", ko: "함께하실 수 있는지 확인", lead: "6주 동안 매주 직접 만들어 보는 과정입니다. 무리가 없는지 확인해 주세요.", qs: [
+    { k: "q7_1", type: "single", t: "6주 동안 주 1회 모임에 나오실 수 있나요?", o: [{ v: "all", t: "모두 나올 수 있다" }, { v: "miss_one", t: "한 번쯤 빠질 수 있다" }, { v: "miss_two", t: "두 번 이상 어렵다" }] },
+    { k: "q7_2", type: "single", layout: "row", t: "모임 밖에서 직접 만들어 보는 데 일주일에 얼마나 쓰실 수 있나요?", o: [{ v: "lt1", t: "1시간 미만" }, { v: "h1_3", t: "1~3시간" }, { v: "h3_5", t: "3~5시간" }, { v: "h5p", t: "5시간 이상" }] },
+    { k: "q7_3", type: "single", t: "노트북과 Claude 유료 구독(월 $20부터 · 회비와 별도)을 준비하실 수 있나요?", o: [{ v: "have", t: "이미 있다" }, { v: "will", t: "시작 전에 준비하겠다" }, { v: "hard", t: "어렵다" }] },
+    { k: "q7_4", type: "single", layout: "row", t: "마지막 주 데모데이에서 만드신 것을 5분 동안 보여 주실 수 있나요?", o: [{ v: "yes", t: "네" }, { v: "no", t: "아니요" }] },
+    { k: "q7_5", type: "multi", other: true, t: "모임이 가능한 시간대를 모두 골라 주세요", o: TIMES },
+    { k: "q7_6", type: "single", t: "원하시던 스터디나 반과 다르게 배정된다면 어떻게 하시겠어요?", o: [{ v: "join", t: "그래도 참여하겠다" }, { v: "next", t: "다음 기수에 참여하겠다" }] },
+    { k: "q7_7", type: "multi", layout: "grid", t: "확인 통화(10분)가 가능한 시간대를 모두 골라 주세요", d: "필요한 분께만 연락드립니다.", o: [{ v: "am", t: "평일 오전" }, { v: "lunch", t: "평일 점심" }, { v: "pm", t: "평일 오후" }, { v: "eve", t: "평일 저녁" }] },
+    { k: "q7_8", type: "long", opt: true, rows: 3, t: "더 하고 싶은 말씀이 있으시면 적어 주세요" }] },
+  talk: { en: "SEMINAR", ko: "AI 특강", lead: "특강 내용과 시간을 정하는 데 씁니다.", qs: [
+    { k: "q8_1", type: "multi", max: 2, other: true, t: "특강에서 가장 보고 싶은 내용을 2개까지 골라 주세요", o: [
+      { v: "mkt", t: "마케팅 · 홍보에 쓰는 법" }, { v: "acct", t: "회계 · 문서 업무에 쓰는 법" }, { v: "sales", t: "영업 · 고객 관리에 쓰는 법" },
+      { v: "cs", t: "고객 문의 응대에 쓰는 법" }, { v: "general", t: "내 업무를 AI에 맡기는 방법 전반" }] },
+    { k: "q8_2", type: "multi", t: "특강에 오실 수 있는 시간대를 모두 골라 주세요", o: TIMES }] },
+  consent: { en: "CONFIRM", ko: "마지막 확인", lead: "제출하기 전에 신청 내용을 확인해 주세요.", pre: "summary", qs: [
+    { k: "q9_1", type: "consent", t: "개인정보 수집 · 이용 동의", label: "위 내용에 동의합니다" },
+    { k: "q9_2", type: "check", opt: true, t: "스튜디오비범의 AI 소식(특강 · 뉴스레터)을 받아 보시겠어요?", d: "언제든 해지할 수 있습니다.", label: "받아 보겠습니다" }] },
+};
+const Q = {};
+for (const s of Object.values(S)) for (const q of s.qs) {
+  if (q.other) q.o = [...q.o, { v: "other", t: "기타", other: true }];
+  Q[q.k] = q;
+}
+const TERMS = [
+  ["수집 항목", "성함 · 회사명 · 직함 · 업종 · 직원 수 · 휴대폰 번호 · 이메일 · 신청서 응답"],
+  ["목적", "1기 선정 · 그룹 · 반 편성 · 특강 안내"],
+  ["보관", "1기 종료 후 3개월 뒤 파기"],
+  ["저장", `응답은 ${CONFIG.storage}(해외 서비스)에 저장되며, 응답 분류에 AI를 활용할 수 있습니다`],
+  ["거부", "동의하지 않으실 수 있으나, 이 경우 신청이 접수되지 않습니다"],
+];
+
+/* ---------------- 상태 ---------------- */
+let A = {}, cur = "intro", order = {}, t0 = null, submitted = null, sending = false;
+const store = {
+  get() { try { return JSON.parse(localStorage.getItem(CONFIG.draftKey) || "null"); } catch (e) { return null; } },
+  set(v) { try { localStorage.setItem(CONFIG.draftKey, JSON.stringify(v)); } catch (e) {} },
+  clear() { try { localStorage.removeItem(CONFIG.draftKey); } catch (e) {} },
+};
+let saveT;
+function save() { clearTimeout(saveT); saveT = setTimeout(() => { if (!submitted) store.set({ A, cur, order, t0, ts: Date.now() }); }, 250); }
+
+/* 화면 순서 — 답에 따라 정해진다 (분기) */
+function seq(a = A) {
+  const out = ["path", "basic"];
+  if (a.q1_1 === "talk") return out.concat("talk", "consent");
+  out.push("reason", "goal", "decided");
+  if (a.q4_0 !== "not_yet") out.push("build");
+  out.push("ai", "task", "cond");
+  if (a.q1_1 === "both") out.push("talk");
+  out.push("consent");
+  return out;
+}
+
+/* ---------------- 도우미 ---------------- */
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const pad = (n) => String(n).padStart(2, "0");
+const $ = (sel, el = document) => el.querySelector(sel);
+const ARROW = '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13M11 4.5 16.5 10 11 15.5" fill="none" stroke="currentColor" stroke-width="2.2"/></svg>';
+const BACK = '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M17 10H4M9 4.5 3.5 10 9 15.5" fill="none" stroke="currentColor" stroke-width="2.2"/></svg>';
+const isClosed = () => Date.now() > Date.parse(CONFIG.closeAt) && !(TOOLS && URLQ.has("open"));
+function shuffled(n) { const a = [...Array(n).keys()]; for (let i = n - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+function optsOf(q) {
+  if (!q.shuffle) return q.o;
+  if (!order[q.k] || order[q.k].length !== q.o.length) order[q.k] = shuffled(q.o.length);
+  return order[q.k].map((i) => q.o[i]);
+}
+function fmtPhone(v) {
+  const d = v.replace(/\D/g, "").slice(0, 11);
+  if (d.length < 4) return d;
+  if (d.length < 8) return d.slice(0, 3) + "-" + d.slice(3);
+  return d.slice(0, 3) + "-" + d.slice(3, d.length - 4) + "-" + d.slice(-4);
+}
+function toast(msg) { const t = $("#toast"); t.textContent = msg; t.classList.add("on"); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove("on"), 1800); }
+function device() {
+  const u = navigator.userAgent;
+  const k = /KAKAOTALK/i.test(u) ? "카톡 " : "";
+  return k + (/iPhone|iPad/i.test(u) ? "iOS" : /Android/i.test(u) ? "Android" : "PC");
+}
+function rings(list) { return list.map(([w, r, t]) => `<i class="ring" style="width:${w}px;height:${w}px;right:${r}px;top:${t}px"></i>`).join(""); }
+
+/* ---------------- 검사 ---------------- */
+function check(q, a = A) {
+  const v = a[q.k];
+  const other = (a[q.k + "_other"] || "").trim();
+  switch (q.type) {
+    case "text": case "long": {
+      const s = (v || "").trim();
+      if (!s) return q.opt ? null : "이 항목을 적어 주세요";
+      if (q.min && s.length < q.min) return `${q.min}자 이상 적어 주세요 (지금 ${s.length}자)`;
+      return null;
+    }
+    case "tel": {
+      const d = (v || "").replace(/\D/g, "");
+      if (!d) return "휴대폰 번호를 적어 주세요";
+      return /^01[016789]\d{7,8}$/.test(d) ? null : "휴대폰 번호를 확인해 주세요 (예: 010-1234-5678)";
+    }
+    case "email": {
+      const s = (v || "").trim();
+      if (!s) return q.opt ? null : "이메일을 적어 주세요";
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s) ? null : "이메일 주소를 확인해 주세요";
+    }
+    case "single":
+      if (!v) return "하나를 골라 주세요";
+      return v === "other" && !other ? "기타 내용을 적어 주세요" : null;
+    case "multi":
+      if (!v || !v.length) return q.opt ? null : "하나 이상 골라 주세요";
+      return v.includes("other") && !other ? "기타 내용을 적어 주세요" : null;
+    case "consent": return v ? null : "동의해 주셔야 신청이 접수됩니다";
+    default: return null;
+  }
+}
+
+/* ---------------- 그리기: 표지 ---------------- */
+function viewIntro() {
+  const d = store.get();
+  const resumable = d && d.A && Object.keys(d.A).length && !isClosed();
+  return `
+<header class="top"><img src="assets/lockup-white.png" alt="STUDIO BEBOMB" width="142" height="24"><span class="due">DUE 11.14 SAT</span></header>
+<section class="hero" id="hero">
+  ${rings([[980, -330, -470], [660, -170, -310], [380, -30, -170]])}
+  <div class="wrap">
+    <div class="lead en"><span>COHORT 01 · 신청서</span><i class="bar"></i></div>
+    <h1 class="an">AI AGENT<br>STUDY GROUP</h1>
+    <div class="endbar"><i class="bar"></i><i class="dot"></i></div>
+    <p class="hero-ko">대표님 회사의 업무 하나를<br>AI로 직접 만들어 돌려 보는 6주</p>
+    <div class="hero-cta" id="heroCta">
+      <button class="btn btn-white" data-act="start">신청 시작하기 ${ARROW}</button>
+      <span class="meta">약 10분 · 11월 14일(토) 마감</span>
+    </div>
+    ${resumable ? `<div class="resume"><p>작성하시던 신청서가 이 기기에 남아 있습니다.</p>
+      <button class="btn btn-white" data-act="resume">이어서 작성하기</button><button class="btn btn-line-w" data-act="restart">처음부터</button></div>` : ""}
+  </div>
+</section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec-hd"><div class="sec-lab en"><b>01</b> WHY</div><h2>왜 신청서를<br>다시 받나요?</h2></div>
+  <div class="sec-bd">
+    <p class="thanks-line">11월 10일 협의 모임에 많은 대표님이 와 주셨습니다. 감사합니다.</p>
+    <p class="stmt">대표님마다 AI를 써 오신 정도도, 이루고 싶은 목표도 달랐습니다. 그래서 이 신청서로 <em>목적별 · 수준별로 그룹</em>을 나눕니다.</p>
+    <div class="crit">
+      <div><span class="cl en">BY GOAL</span><h3>목적별</h3><p class="cq">AI로 무엇을 이루고 싶으신가요?</p>
+        <p class="ca">목표에 맞춰 <b>6주 제작 스터디 세 갈래</b>(A · B · C) 또는 <b>AI 특강</b>으로 나눕니다.</p></div>
+      <div><span class="cl en">BY LEVEL</span><h3>수준별</h3><p class="cq">AI를 지금 얼마나 쓰고 계신가요?</p>
+        <p class="ca">같은 목표 안에서도 <b>비슷한 수준끼리 반</b>을 나눠, 첫 주부터 대표님 업무로 바로 시작합니다.</p></div>
+    </div>
+    <p class="why-note">제작 스터디는 <b>반당 6~8명</b>으로 매주 1:1 점검을 합니다. 그래서 신청서를 검토한 뒤 선정합니다.</p>
+  </div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec-hd"><div class="sec-lab en"><b>02</b> TWO TRACKS</div><h2>크게<br><em>두 가지 과정</em>으로<br>나눕니다</h2></div>
+  <div class="sec-bd"><div class="tracks">
+    <article class="track a"><span class="tag">신청서 검토 후 선정</span>
+      <div class="thd"><span class="n">6</span><span class="u">주</span><span class="t">제작 스터디</span></div>
+      <p class="sub">대표님 목표에 맞춘 세 가지 스터디 — 내 회사 업무를 AI로 직접 만듭니다</p>
+      <div class="subs">${TRACKS.map((x) => `<div class="sub3"><span class="k">${x.k}</span><b>${esc(x.t)}</b><q>${esc(x.q)}</q>
+        <dl><dt>6주 뒤 남는 것</dt><dd>${esc(x.keep)}</dd><dt>이런 분께</dt><dd>${esc(x.who)}</dd></dl></div>`).join("")}</div>
+      <p class="common"><b>세 스터디 공통</b> · 반당 6~8명 · 수준별 반 · 주 1회 모임 + 1:1 점검 · 6주차 데모데이</p></article>
+    <article class="track b"><span class="tag">누구나 신청</span>
+      <div class="thd"><span class="n">2</span><span class="u">시간</span><span class="t">AI 특강</span></div>
+      <p class="sub">AI 활용 교양 · 역량 강화</p>
+      <ul class="dl"><li>직접 만들기보다, AI로 무엇이 되는지 먼저 넓게 익히고 싶은 분께</li><li>업무별 활용 사례</li><li>직접 따라 해 보기</li></ul></article>
+  </div></div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec-hd"><div class="sec-lab en"><b>03</b> BEFORE YOU START</div><h2>신청 전에<br>확인해 주세요</h2></div>
+  <div class="sec-bd"><ul class="check">
+    <li><b>마감</b><span>11월 14일(토) 밤 12시까지 · 결과는 마감 후 개별로 연락드립니다</span></li>
+    <li><b>소요 시간</b><span>제작 스터디 약 10분 · AI 특강 약 2분</span></li>
+    <li><b>정답이 없습니다</b><span>평소 모습 그대로 적어 주세요</span></li>
+    <li><b>응답 용도</b><span>그룹 · 반 편성과 선정에만 씁니다</span></li>
+    <li><b>임시 저장</b><span>작성 중인 내용은 이 기기에 저장됩니다. 창을 닫았다 다시 열어도 이어서 쓰실 수 있습니다</span></li>
+  </ul></div>
+</div></section>
+
+<section class="final"><div class="wrap">
+  <h3>준비되셨다면<br>시작해 주세요</h3>
+  <button class="btn btn-blue" data-act="start">신청 시작하기 ${ARROW}</button>
+  <p class="meta">11월 14일(토) 마감 · 약 10분 · 중간에 닫아도 이 기기에 저장됩니다</p>
+</div></section>
+${footer()}
+<div class="stick" id="stick"><button class="btn btn-blue" data-act="start">신청 시작하기 ${ARROW}</button></div>`;
+}
+function footer() {
+  return `<footer class="foot"><div class="wrap"><img src="assets/lockup-dark.png" alt="STUDIO BEBOMB" width="142" height="24">
+  <span class="en">AI AGENT STUDY GROUP · COHORT 01</span></div></footer>`;
+}
+
+/* ---------------- 그리기: 신청서 ---------------- */
+function viewForm() {
+  const sq = seq(), i = sq.indexOf(cur), s = S[cur], n = sq.length;
+  const steps = sq.map((name, j) => `<li class="${j < i ? "done" : j === i ? "cur" : ""}"><span class="n">${pad(j + 1)}</span><i class="bx"></i>${esc(S[name].ko)}</li>`).join("");
+  const last = cur === "consent";
+  return `
+<div class="shell">
+  <aside class="rail" aria-hidden="true">${rings([[620, -300, -220], [400, -190, -110]])}
+    <img class="logo" src="assets/lockup-white.png" alt="" width="130" height="22">
+    <div class="rt an">AI AGENT<br>STUDY GROUP</div><div class="rs en">COHORT 01 · 신청서</div>
+    <ol class="steps">${steps}</ol>
+    <p class="rf">마감 <b>11.14 SAT 23:59</b><br>작성 중인 내용은 이 기기에 저장됩니다.</p>
+  </aside>
+  <div class="main">
+    <div class="tbar"><div class="row"><span class="brand"><img src="assets/symbol-white.png" alt="">1기 신청서</span>
+      <span class="cnt mono"><b>${pad(i + 1)}</b> / ${pad(n)}</span></div>
+      <div class="prog" role="progressbar" aria-valuemin="0" aria-valuemax="${n}" aria-valuenow="${i + 1}"><i style="width:${((i + 1) / n) * 100}%"></i></div></div>
+    <form class="screen enter" id="screen" novalidate autocomplete="on">
+      <div class="sc-lab en"><b>${pad(i + 1)}</b> ${s.en}</div>
+      <h2 class="sc-h" tabindex="-1" id="sch">${esc(s.ko)}</h2>
+      ${s.lead ? `<p class="sc-lead">${esc(s.lead)}</p>` : ""}
+      <div class="sc-body">${s.pre === "scenario" ? scenario() : ""}${s.pre === "summary" ? summary() : ""}${s.qs.map((q, j) => viewQ(q, j, s.qs.length)).join("")}</div>
+      <input class="hp" id="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+    </form>
+    <nav class="nav"><div class="row">
+      <button class="btn btn-ghost" type="button" data-act="back" aria-label="이전">${BACK}</button>
+      <button class="btn btn-blue" type="button" data-act="next" id="nextBtn">${last ? "제출하기" : "다음"} ${ARROW}</button>
+      <span class="kb">Enter ↵</span>
+    </div></nav>
+  </div>
+</div>`;
+}
+function scenario() {
+  return `<div class="scn" aria-hidden="true"><div class="scn-lab en">SITUATION</div>
+  <div class="scn-flow"><div><b>30</b><span>지난달<br>거래처 메일</span></div><i>→</i>
+  <div><b class="k">미수금</b><span>대금을 아직<br>못 받은 건만</span></div><i>→</i>
+  <div class="to"><b class="k">표</b><span>한눈에<br>정리</span></div></div></div>`;
+}
+function summary() {
+  const p = S.path.qs[0].o.find((x) => x.v === A.q1_1);
+  const rows = [["과정", p ? p.t : "—"], ["성함", A.q2_1], ["회사", [A.q2_2, A.q2_3].filter(Boolean).join(" · ")], ["연락처", A.q2_6]];
+  return `<div class="summary"><div class="sh"><span class="en">YOUR APPLICATION</span><button type="button" class="link" data-go="basic">수정</button></div>
+  <dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v || "—")}</dd>`).join("")}</dl></div>`;
+}
+function viewQ(q, j, total) {
+  const id = "f_" + q.k;
+  const num = total > 1 && !q.solo ? `<div class="q-n">Q${j + 1}</div>` : "";
+  const head =
+    `${num}<${["text", "long", "tel", "email"].includes(q.type) ? `label for="${id}"` : `div id="t_${q.k}"`} class="q-t">${esc(q.t)}${q.opt ? '<span class="op">선택</span>' : ""}</${["text", "long", "tel", "email"].includes(q.type) ? "label" : "div"}>
+     ${q.d ? `<p class="q-d" id="d_${q.k}">${esc(q.d)}</p>` : ""}`;
+  return `<div class="q${q.solo ? " solo" : ""}" id="q_${q.k}" data-k="${q.k}">${head}<div class="q-b">${field(q, id)}</div>
+    <p class="emsg" id="e_${q.k}" role="alert"></p></div>`;
+}
+function field(q, id) {
+  const v = A[q.k];
+  const desc = q.d ? ` aria-describedby="d_${q.k}"` : "";
+  switch (q.type) {
+    case "text":
+      return `<input class="in" id="${id}" data-k="${q.k}" type="text" value="${esc(v)}" placeholder="${esc(q.ph || "")}"${q.max ? ` maxlength="${q.max}"` : ""}${q.ac ? ` autocomplete="${q.ac}"` : ""}${desc}>${q.min ? counter(q) : ""}`;
+    case "long":
+      return `<textarea class="in" id="${id}" data-k="${q.k}" rows="${q.rows || 4}" maxlength="2000" placeholder="${esc(q.ph || "")}"${desc}>${esc(v)}</textarea>${q.min ? counter(q) : ""}`;
+    case "tel":
+      return `<input class="in mono" id="${id}" data-k="${q.k}" type="tel" inputmode="numeric" autocomplete="tel" value="${esc(v)}" placeholder="${esc(q.ph)}" maxlength="13"${desc}>`;
+    case "email":
+      return `<input class="in" id="${id}" data-k="${q.k}" type="email" inputmode="email" autocomplete="email" autocapitalize="off" value="${esc(v)}" placeholder="${esc(q.ph)}"${desc}>`;
+    case "single": case "multi": {
+      const multi = q.type === "multi", lay = q.layout || "list";
+      const list = optsOf(q).map((op, i) => {
+        const on = multi ? (v || []).includes(op.v) : v === op.v;
+        const dis = multi && q.max && !on && (v || []).length >= q.max;
+        return `<button type="button" class="opt${q.size === "lg" ? " lg" : ""}" role="${multi ? "checkbox" : "radio"}" aria-checked="${on}" aria-disabled="${!!dis}" data-k="${q.k}" data-v="${op.v}">
+          ${lay === "list" ? `<span class="key">${String.fromCharCode(65 + i)}</span>` : ""}<span class="ot">${esc(op.t)}${op.s ? `<small>${esc(op.s)}</small>` : ""}${op.s2 ? `<small>${esc(op.s2)}</small>` : ""}</span><span class="ind"></span></button>`;
+      }).join("");
+      const showOther = multi ? (v || []).includes("other") : v === "other";
+      return `<div class="opts ${lay}" role="${multi ? "group" : "radiogroup"}" aria-labelledby="t_${q.k}">${list}</div>
+        ${q.other ? `<div class="other"${showOther ? "" : " hidden"}><input class="in" data-k="${q.k}_other" type="text" maxlength="80" placeholder="기타 — 직접 적어 주세요" value="${esc(A[q.k + "_other"])}" aria-label="${esc(q.t)} — 기타"></div>` : ""}
+        ${q.max ? `<p class="maxnote${(v || []).length >= q.max ? " full" : ""}" id="m_${q.k}">${(v || []).length} / ${q.max} 선택</p>` : ""}`;
+    }
+    case "consent": case "check":
+      return `${q.type === "consent" ? `<div class="terms"><dl>${TERMS.map(([k, x]) => `<dt>${k}</dt><dd>${esc(x)}</dd>`).join("")}</dl></div>` : ""}
+        <div class="opts"><button type="button" class="opt" role="checkbox" aria-checked="${!!v}" aria-labelledby="t_${q.k}" data-k="${q.k}" data-v="1">
+        <span class="ot">${esc(q.label)}${q.type === "consent" ? "<small>필수</small>" : ""}</span><span class="ind"></span></button></div>`;
+  }
+  return "";
+}
+function counter(q) {
+  const n = (A[q.k] || "").trim().length;
+  return `<div class="cnt-row"><span>${q.min}자 이상</span><span class="${n >= q.min ? "ok" : ""}" id="c_${q.k}">${n}자${n >= q.min ? " ✓" : ""}</span></div>`;
+}
+
+/* ---------------- 그리기: 감사 · 마감 ---------------- */
+function viewThanks() {
+  const talk = submitted?.answers?.q1_1 === "talk";
+  const body = talk
+    ? "특강 신청이 접수되었습니다. 특강 일정과 비용이 정해지면 연락드립니다."
+    : "마감 후 신청서를 검토해 개별로 연락드립니다. 결과는 <b>선정 · 대기 · 특강 안내</b> 중 하나로 알려 드립니다.";
+  const steps = talk
+    ? `<li><span class="d">STEP 01</span><div><b>신청 마감</b><small>11월 14일(토)</small></div></li>
+       <li><span class="d">STEP 02</span><div><b>특강 안내</b><small>일정 · 비용 · 장소를 개별로 알려 드립니다</small></div></li>`
+    : `<li><span class="d">STEP 01</span><div><b>신청서 검토</b><small>필요한 분께 확인 통화</small></div></li>
+       <li class="key"><span class="d">STEP 02</span><div><b>결과 안내</b><small>선정 · 대기 · 특강 안내 — 스터디 그룹 · 반도 함께</small></div></li>
+       <li><span class="d">STEP 03</span><div><b>그룹별 스터디 시작</b><small>시작일은 결과와 함께 안내</small></div></li>`;
+  return `
+<header class="top"><img src="assets/lockup-white.png" alt="STUDIO BEBOMB" width="142" height="24"><span class="due">RECEIVED</span></header>
+<section class="hero done">${rings([[900, -320, -420], [600, -160, -280]])}<div class="wrap">
+  <div class="lead en"><span>COHORT 01 · 접수 완료</span><i class="bar"></i></div>
+  <h1 class="an">THANK YOU</h1>
+  <div class="endbar"><i class="bar"></i><i class="dot"></i></div>
+  <p class="hero-ko">신청해 주셔서 감사합니다</p>
+  <p class="hero-p">${body}<br>궁금하신 점은 단톡방에 편하게 남겨 주세요.</p>
+</div></section>
+<section class="sec"><div class="wrap">
+  <div class="sec-hd"><div class="sec-lab en"><b>NEXT</b> WHAT'S NEXT</div><h2>다음 단계</h2></div>
+  <div class="sec-bd"><ol class="tl" style="--n:${talk ? 2 : 3}">${steps}</ol>
+  ${TOOLS || DEBUG ? `<details class="dbg"${DEBUG ? " open" : ""}><summary>미리보기 — 보낸 데이터 (신청자에게는 보이지 않음)</summary><pre>${esc(JSON.stringify(submitted, null, 1))}</pre></details>` : ""}</div>
+</div></section>${footer()}`;
+}
+function viewClosed() {
+  return `
+<header class="top"><img src="assets/lockup-dark.png" alt="STUDIO BEBOMB" width="142" height="24"><span class="due">CLOSED</span></header>
+<section class="hero done closed"><div class="wrap">
+  <div class="lead en"><span>COHORT 01 · 신청 마감</span><i class="bar"></i></div>
+  <h1 class="an">CLOSED</h1>
+  <div class="endbar"><i class="bar"></i><i class="dot"></i></div>
+  <p class="hero-ko">신청이 마감되었습니다</p>
+  <p class="hero-p">관심 가져 주셔서 감사합니다. 다음 기수와 특강 소식은 단톡방으로 안내드립니다.</p>
+</div></section>${footer()}`;
+}
+
+/* ---------------- 화면 전환 ---------------- */
+const app = $("#app");
+function render(focus = true) {
+  document.body.dataset.screen = cur;
+  if (isClosed() && cur !== "thanks") app.innerHTML = viewClosed();
+  else if (cur === "intro") app.innerHTML = viewIntro();
+  else if (cur === "thanks") app.innerHTML = viewThanks();
+  else app.innerHTML = viewForm();
+  if (PREVIEW) app.insertAdjacentHTML("beforeend", '<div class="pv">PREVIEW</div>');
+  window.scrollTo(0, 0);
+  if (cur === "intro") watchHero();
+  if (focus && S[cur]) { const h = $("#sch"); h && h.focus({ preventScroll: true }); }
+}
+function go(name) { cur = name; save(); render(); }
+function start() { if (!t0) t0 = Date.now(); go("path"); }
+function next() {
+  const errs = validate(cur);
+  if (errs.length) { showErrors(errs); return; }
+  if (cur === "consent") return submit();
+  const sq = seq();
+  go(sq[sq.indexOf(cur) + 1]);
+}
+function back() {
+  const sq = seq(), i = sq.indexOf(cur);
+  if (i <= 0) { cur = "intro"; save(); render(false); return; }
+  go(sq[i - 1]);
+}
+function validate(name) { return S[name].qs.map((q) => [q.k, check(q)]).filter(([, m]) => m); }
+function showErrors(errs) {
+  document.querySelectorAll(".q.err").forEach((el) => el.classList.remove("err"));
+  for (const [k, m] of errs) { const el = $("#q_" + k); if (el) { el.classList.add("err"); $("#e_" + k).textContent = m; } }
+  const first = $("#q_" + errs[0][0]);
+  if (first) {
+    const y = first.getBoundingClientRect().top + window.scrollY - 76;
+    window.scrollTo({ top: y, behavior: "smooth" });
+    const f = first.querySelector("input,textarea,.opt");
+    f && setTimeout(() => f.focus({ preventScroll: true }), 300);
+  }
+  toast(errs.length > 1 ? `확인이 필요한 항목이 ${errs.length}개 있습니다` : errs[0][1]);
+}
+function clearErr(k) { const el = $("#q_" + k); el && el.classList.remove("err"); }
+
+/* ---------------- 입력 ---------------- */
+function pick(k, v) {
+  const q = Q[k];
+  if (q.type === "single") A[k] = v;
+  else if (q.type === "multi") {
+    let arr = [...(A[k] || [])];
+    const op = q.o.find((x) => x.v === v);
+    if (arr.includes(v)) arr = arr.filter((x) => x !== v);
+    else if (op.excl) arr = [v];
+    else {
+      arr = arr.filter((x) => !q.o.find((y) => y.v === x).excl);
+      if (q.max && arr.length >= q.max) { toast(`${q.max}개까지 고르실 수 있습니다`); return false; }
+      arr.push(v);
+    }
+    A[k] = arr;
+  } else A[k] = !A[k];
+  return true;
+}
+function refreshQ(k) {
+  const q = Q[k], box = $("#q_" + k);
+  if (!box) return;
+  const v = A[k];
+  box.querySelectorAll(".opt").forEach((b) => {
+    const on = q.type === "multi" ? (v || []).includes(b.dataset.v) : q.type === "single" ? v === b.dataset.v : !!v;
+    b.setAttribute("aria-checked", on);
+    if (q.max) b.setAttribute("aria-disabled", !on && (v || []).length >= q.max);
+  });
+  const ot = box.querySelector(".other");
+  if (ot) {
+    const show = q.type === "multi" ? (v || []).includes("other") : v === "other";
+    const was = !ot.hidden; ot.hidden = !show;
+    if (show && !was) setTimeout(() => ot.querySelector("input").focus(), 50);
+  }
+  const m = $("#m_" + k);
+  if (m) { m.textContent = `${(v || []).length} / ${q.max} 선택`; m.classList.toggle("full", (v || []).length >= q.max); }
+  clearErr(k);
+}
+app.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-act],[data-go],.opt");
+  if (!b) return;
+  if (b.classList.contains("opt")) {
+    if (b.getAttribute("aria-disabled") === "true") { toast(`${Q[b.dataset.k].max}개까지 고르실 수 있습니다`); return; }
+    const k = b.dataset.k;
+    if (pick(k, b.dataset.v)) {
+      refreshQ(k); save();
+      const s = S[cur];
+      if (s && s.auto && Q[k].type === "single" && A[k] !== "other") { clearTimeout(next.t); next.t = setTimeout(next, 340); }
+    }
+    return;
+  }
+  if (b.dataset.go) { go(b.dataset.go); return; }
+  const act = b.dataset.act;
+  if (act === "start") start();
+  else if (act === "resume") { const d = store.get(); if (d) { A = d.A || {}; order = d.order || {}; t0 = d.t0 || Date.now(); cur = S[d.cur] ? d.cur : "path"; render(); } }
+  else if (act === "restart") { store.clear(); A = {}; order = {}; t0 = null; start(); }
+  else if (act === "next") next();
+  else if (act === "back") back();
+});
+app.addEventListener("input", (e) => {
+  const el = e.target;
+  const k = el.dataset && el.dataset.k;
+  if (!k) return;
+  if (el.type === "tel") { const p = el.selectionStart === el.value.length; el.value = fmtPhone(el.value); if (p) el.setSelectionRange(el.value.length, el.value.length); }
+  A[k] = el.value;
+  const base = k.replace(/_other$/, "");
+  const q = Q[base];
+  if (q && q.min && k === base) {
+    const n = el.value.trim().length, c = $("#c_" + k);
+    if (c) { c.textContent = `${n}자${n >= q.min ? " ✓" : ""}`; c.classList.toggle("ok", n >= q.min); }
+  }
+  clearErr(base); save();
+});
+app.addEventListener("keydown", (e) => {
+  if (e.key !== "Enter" || e.isComposing || e.keyCode === 229) return;
+  const t = e.target;
+  if (t.tagName === "TEXTAREA" || t.closest(".opt") || t.closest("[data-act]")) return;
+  if (t.tagName === "INPUT" && S[cur]) { e.preventDefault(); next(); }
+});
+app.addEventListener("submit", (e) => e.preventDefault());
+
+/* 표지: 첫 버튼이 화면 밖으로 나가면 아래 고정 버튼 */
+function watchHero() {
+  const c = $("#heroCta"), s = $("#stick"), f = document.querySelector(".final");
+  if (!c || !s || !("IntersectionObserver" in window)) return;
+  let heroOut = false, finalIn = false;
+  const upd = () => s.classList.toggle("on", heroOut && !finalIn);
+  new IntersectionObserver(([en]) => { heroOut = !en.isIntersecting && en.boundingClientRect.top < 0; upd(); }).observe(c);
+  if (f) new IntersectionObserver(([en]) => { finalIn = en.isIntersecting; upd(); }).observe(f);
+}
+
+/* ---------------- 제출 ---------------- */
+function label(q, v) {
+  const ot = (A[q.k + "_other"] || "").trim();
+  const one = (x) => { const op = q.o.find((y) => y.v === x); return op.other ? `기타: ${ot}` : op.t; };
+  if (q.type === "single") return one(v);
+  if (q.type === "multi") return v.map(one).join(" · ");
+  if (q.type === "consent") return v ? "동의" : "";
+  if (q.type === "check") return v ? "받음" : "";
+  return String(v).trim();
+}
+function payload(a = A) {
+  const answers = {}, text = {};
+  for (const name of seq(a)) for (const q of S[name].qs) {
+    const v = a[q.k];
+    if (v == null || v === "" || v === false || (Array.isArray(v) && !v.length)) continue;
+    answers[q.k] = typeof v === "string" ? v.trim() : v;
+    text[q.k] = label(q, v);
+    if (v === "other" || (Array.isArray(v) && v.includes("other"))) answers[q.k + "_other"] = (a[q.k + "_other"] || "").trim();
+  }
+  return { v: CONFIG.version, answers, text, durationSec: t0 ? Math.round((Date.now() - t0) / 1000) : null, device: device(), hp: ($("#hp") || {}).value || "" };
+}
+async function submit() {
+  if (sending) return;
+  sending = true;
+  const btn = $("#nextBtn"); btn.disabled = true; btn.innerHTML = "제출하는 중…";
+  const body = payload();
+  try {
+    if (PREVIEW) { await new Promise((r) => setTimeout(r, 700)); console.log("[미리보기] 보낼 데이터", body); }
+    else {
+      const ctl = new AbortController(); const tm = setTimeout(() => ctl.abort(), 20000);
+      const res = await fetch(CONFIG.endpoint, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(body), signal: ctl.signal, redirect: "follow" });
+      clearTimeout(tm);
+      const j = await res.json().catch(() => ({}));
+      if (j.error === "closed") { cur = "closed"; app.innerHTML = viewClosed(); window.scrollTo(0, 0); return; }
+      if (!res.ok || !j.ok) throw new Error(j.error || "HTTP " + res.status);
+      body.id = j.id;
+    }
+    submitted = body; store.clear(); cur = "thanks"; render(false);
+  } catch (err) {
+    console.error(err);
+    btn.disabled = false; btn.innerHTML = `제출하기 ${ARROW}`;
+    toast("제출되지 않았습니다. 잠시 후 다시 눌러 주세요");
+  } finally { sending = false; }
+}
+
+/* ---------------- 미리보기 도구: ?screen=이름&demo=study|talk|both|undecided · ?selftest=1 ---------------- */
+const DEMO = {
+  q1_1: "study", q2_1: "김대표", q2_2: "샘플상사", q2_3: "대표", q2_4: "o1", q2_5: "5_19", q2_6: "010-1234-5678", q2_7: "ceo@sample.co.kr",
+  q3_1: "build_ready", q3_2: "b_company", q4_0: "yes",
+  q4_1: "매주 월요일 아침, 지난주 매출 · 미수금 · 할 일을 정리한 보고서가 제 메일로 먼저 와 있게 하고 싶습니다. 저와 경리 담당이 봅니다.",
+  q4_2: "경리 담당이 매주 월요일 엑셀 3개를 합쳐 1시간쯤 걸려 만듭니다.", q4_3: "4주 연속 월요일 9시 전에 보고서가 와 있다", q4_4: "direct", q4_5: "o3",
+  q5_1: "weekly", q5_2: ["o1", "o2"], q5_3: "ChatGPT로 제안서 초안을 만들어 거래처에 보냈다.", q5_4: "can",
+  q6_1: "메일 30통을 붙여 넣고, 입금 확인이 안 된 건만 거래처 · 금액 · 날짜로 표를 만들어 달라고 하겠습니다.",
+  q7_1: "all", q7_2: "h1_3", q7_3: "will", q7_4: "yes", q7_5: ["tue_am"], q7_6: "join", q7_7: ["am", "pm"],
+  q8_1: ["mkt", "acct"], q8_2: ["eve"], q9_1: true,
+};
+function selftest() {
+  const r = [];
+  const t = (name, ok, got) => r.push({ name, ok: !!ok, got });
+  const eq = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+  t("분기: 스터디 + 업무 있음", eq(seq({ q1_1: "study", q4_0: "yes" }), ["path", "basic", "reason", "goal", "decided", "build", "ai", "task", "cond", "consent"]), seq({ q1_1: "study", q4_0: "yes" }));
+  t("분기: 스터디 + 아직 → 만들 것 건너뜀", eq(seq({ q1_1: "study", q4_0: "not_yet" }), ["path", "basic", "reason", "goal", "decided", "ai", "task", "cond", "consent"]), seq({ q1_1: "study", q4_0: "not_yet" }));
+  t("분기: 특강만", eq(seq({ q1_1: "talk" }), ["path", "basic", "talk", "consent"]), seq({ q1_1: "talk" }));
+  t("분기: 둘 다 → 특강 페이지 포함", eq(seq({ q1_1: "both", q4_0: "yes" }), ["path", "basic", "reason", "goal", "decided", "build", "ai", "task", "cond", "talk", "consent"]), seq({ q1_1: "both", q4_0: "yes" }));
+  t("검사: 59자 → 막힘", check(Q.q4_1, { q4_1: "가".repeat(59) }) !== null);
+  t("검사: 60자 → 통과", check(Q.q4_1, { q4_1: "가".repeat(60) }) === null);
+  t("검사: 휴대폰 형식 오류", check(Q.q2_6, { q2_6: "010-123-45" }) !== null);
+  t("검사: 휴대폰 정상", check(Q.q2_6, { q2_6: "010-1234-5678" }) === null);
+  t("검사: 이메일 선택 — 비워도 통과", check(Q.q2_7, {}) === null);
+  t("검사: 기타 고르고 비우면 막힘", check(Q.q2_4, { q2_4: "other" }) !== null);
+  t("검사: 동의 안 하면 막힘", check(Q.q9_1, {}) !== null);
+  t("검사: 하고 싶은 말(선택) — 비워도 통과", check(Q.q7_8, {}) === null);
+  const keep = A; A = { q8_1: ["mkt", "acct"] };
+  t("최대 2개: 세 번째는 안 들어감", pick("q8_1", "cs") === false && A.q8_1.length === 2, A.q8_1);
+  A = { q5_2: ["o1", "o2"] }; pick("q5_2", "none");
+  t("'써 본 적 없음'은 단독", eq(A.q5_2, ["none"]), A.q5_2);
+  pick("q5_2", "o3"); t("다른 도구를 고르면 '없음' 해제", eq(A.q5_2, ["o3"]), A.q5_2);
+  A = { ...DEMO, q1_1: "talk" };
+  const p1 = payload(A);
+  t("특강만: 스터디 문항은 보내지 않음", !("q3_1" in p1.answers) && !("q4_1" in p1.answers) && "q8_1" in p1.answers, Object.keys(p1.answers));
+  A = { ...DEMO, q2_4: "other", q2_4_other: "화장품" };
+  const p2 = payload(A);
+  t("기타 문구 저장", p2.text.q2_4 === "기타: 화장품" && p2.answers.q2_4_other === "화장품", p2.text.q2_4);
+  t("과정 이름 저장", p2.text.q1_1 === "6주 제작 스터디", p2.text.q1_1);
+  A = keep;
+  const pass = r.filter((x) => x.ok).length;
+  document.title = `SELFTEST ${pass}/${r.length}`;
+  app.innerHTML = `<pre id="selftest" style="padding:20px;font:12px/1.5 monospace;white-space:pre-wrap">${esc(JSON.stringify({ pass, total: r.length, results: r }, null, 1))}</pre>`;
+}
+
+/* ---------------- 시작 ---------------- */
+(function init() {
+  if (TOOLS && URLQ.has("selftest")) return selftest();
+  if (TOOLS && URLQ.get("screen")) {
+    const demo = URLQ.get("demo");
+    if (demo) { A = { ...DEMO }; if (demo === "talk" || demo === "both") A.q1_1 = demo; if (demo === "undecided") A.q4_0 = "not_yet"; }
+    if (URLQ.has("empty")) A = {};
+    cur = URLQ.get("screen"); t0 = Date.now();
+    if (cur === "thanks") submitted = payload();
+    if (URLQ.has("errors") && S[cur]) { render(false); showErrors(validate(cur)); return; }
+    render(false); return;
+  }
+  render(false);
+})();
+</script>
+</body>
+</html>
