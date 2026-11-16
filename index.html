@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>AI AGENT STUDY GROUP 1기 신청서 · STUDIO BEBOMB</title>
-<meta name="description" content="AI AGENT STUDY GROUP 1기 신청서 — 신청 접수 종료">
+<meta name="description" content="AI AGENT STUDY GROUP 1기 신청서 — 추가 접수 · 11월 16일(월) 23:55 마감">
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#003CFF">
 <meta property="og:type" content="website">
 <meta property="og:title" content="AI AGENT STUDY GROUP 1기 신청서">
-<meta property="og:description" content="목적별 · 수준별 반 배정을 위한 신청서 — 신청 접수 종료">
+<meta property="og:description" content="목적별 · 수준별 반 배정을 위한 신청서 — 추가 접수 · 11월 16일(월) 23:55 마감">
 <meta property="og:url" content="https://jonathanrok.github.io/bebomb-ai-study/">
 <meta property="og:image" content="https://jonathanrok.github.io/bebomb-ai-study/assets/og.png">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
@@ -319,7 +319,7 @@ textarea.in{min-height:136px;resize:vertical;line-height:1.62}
    ============================================================ */
 const CONFIG = {
   endpoint: "https://script.google.com/macros/s/AKfycbyOK8K5yZjIW9KMESif4oy_hFk1dv2Yi0eBQmWRpKumtN24Cvkz8N-jhH9uXcan2RqukQ/exec",   // 응답 받는 주소
-  closeAt: "2026-11-14T20:00:00+09:00",              // 11-14 Jonathan: 마감일 당일 조기 종료
+  closeAt: "2026-11-16T23:55:00+09:00",              // 11-16 Jonathan: 추가 접수 (11-14 20:00 종료 → 재개) · 서버 CLOSE_AT 과 같게
   storage: "Google 스프레드시트",
   version: "cohort01-web-v3",
   draftKey: "bebomb_cohort01_draft_v1",
@@ -490,7 +490,7 @@ function viewIntro() {
   const d = store.get();
   const resumable = d && d.A && Object.keys(d.A).length && !isClosed();
   return `
-<header class="top"><img src="assets/lockup-white.png" alt="STUDIO BEBOMB" width="142" height="24"><span class="due">DUE 11.14 SAT</span></header>
+<header class="top"><img src="assets/lockup-white.png" alt="STUDIO BEBOMB" width="142" height="24"><span class="due">DUE 11.16 MON</span></header>
 <section class="hero" id="hero">
   ${rings([[980, -330, -470], [660, -170, -310], [380, -30, -170]])}
   <div class="wrap">
@@ -500,7 +500,7 @@ function viewIntro() {
     <p class="hero-ko">회사 업무 하나를<br>AI로 직접 자동화하는 6주</p>
     <div class="hero-cta" id="heroCta">
       <button class="btn btn-white" data-act="start">신청 시작하기 ${ARROW}</button>
-      <span class="meta">약 10분 · 11월 14일(토) 마감</span>
+      <span class="meta">약 10분 · 추가 접수 11월 16일(월) 23:55 마감</span>
     </div>
     ${resumable ? `<div class="resume"><p>작성 중인 신청서가 이 기기에 저장되어 있습니다.</p>
       <button class="btn btn-white" data-act="resume">이어서 작성하기</button><button class="btn btn-line-w" data-act="restart">처음부터</button></div>` : ""}
@@ -541,7 +541,7 @@ function viewIntro() {
 <section class="sec"><div class="wrap">
   <div class="sec-hd"><div class="sec-lab en"><b>03</b> BEFORE YOU START</div><h2>신청 전<br>확인 사항</h2></div>
   <div class="sec-bd"><ul class="check">
-    <li><b>마감</b><span>11월 14일(토) 자정 · 결과는 마감 후 개별 안내</span></li>
+    <li><b>마감</b><span>추가 접수 · 11월 16일(월) 오후 11시 55분 · 결과는 마감 후 개별 안내</span></li>
     <li><b>소요 시간</b><span>약 10분</span></li>
     <li><b>정답 없음</b><span>평소 방식 그대로 작성해 주세요</span></li>
     <li><b>응답 용도</b><span>선정과 반 배정에만 활용합니다</span></li>
@@ -552,7 +552,7 @@ function viewIntro() {
 <section class="final"><div class="wrap">
   <h3>준비되셨다면<br>시작하세요</h3>
   <button class="btn btn-blue" data-act="start">신청 시작하기 ${ARROW}</button>
-  <p class="meta">11월 14일(토) 마감 · 약 10분 · 작성 내용 자동 저장</p>
+  <p class="meta">추가 접수 11월 16일(월) 23:55 마감 · 약 10분 · 작성 내용 자동 저장</p>
 </div></section>
 ${footer()}
 <div class="stick" id="stick"><button class="btn btn-blue" data-act="start">신청 시작하기 ${ARROW}</button></div>`;
@@ -573,7 +573,7 @@ function viewForm() {
     <img class="logo" src="assets/lockup-white.png" alt="" width="130" height="22">
     <div class="rt an">AI AGENT<br>STUDY GROUP</div><div class="rs en">COHORT 01 · 신청서</div>
     <ol class="steps">${steps}</ol>
-    <p class="rf">마감 <b>11.14 SAT 23:59</b><br>작성 중인 내용은 이 기기에 저장됩니다.</p>
+    <p class="rf">마감 <b>11.16 MON 23:55</b><br>작성 중인 내용은 이 기기에 저장됩니다.</p>
   </aside>
   <div class="main">
     <div class="tbar"><div class="row"><span class="brand"><img src="assets/symbol-white.png" alt="">1기 신청서</span>
